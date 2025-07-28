@@ -1,22 +1,24 @@
 [project]
-name = "study-tracker-backend"
+name = "study-tracker-frontend"
 version = "0.0.0"
-description = "Backend API for tracking study time"
+description = "Frontend for Study Tracker application"
 readme = "README.md"
 authors = [{ name = "Konrad Ptasznik", email = "konradptasznik97@gmail.com" }]
 requires-python = ">=3.13"
 dependencies = [
-    "fastapi>=0.116.1",
-    "httpx>=0.28.1",
-    "uvicorn>=0.35.0",
+    "datetime>=5.5",
+    "flask>=3.1.1",
+    "logging>=0.4.9.6",
+    "requests>=2.32.4",
 ]
 
 [project.scripts]
-study-tracker-api = "backend.main:main"
+study-tracker-frontend = "frontend.main:main"
+
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/backend"]
+packages = ["src/frontend"]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
