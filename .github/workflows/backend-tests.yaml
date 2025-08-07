@@ -72,4 +72,4 @@ jobs:
         with:
           header: test-coverage
           recreate: true
-          path: code-coverage-results.md     - 
+          path: code-coverage-results.md
