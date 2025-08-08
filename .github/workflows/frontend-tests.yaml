@@ -1,4 +1,4 @@
-name: Backend Tests
+name: Frontend Tests
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ jobs:
   check_paths:
     runs-on: ubuntu-latest
     outputs:
-      should_run: ${{ steps.filter.outputs.backend }}
+      should_run: ${{ steps.filter.outputs.frontend }}
     steps:
       - uses: actions/checkout@v4
       - uses: dorny/paths-filter@v3.0.2
